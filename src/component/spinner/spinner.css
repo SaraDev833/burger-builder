@@ -1,0 +1,47 @@
+/* HTML: <div class="loader"></div> */
+.loader-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center !important; /* Centers vertically */
+    height: 100vh; /* Full height of the viewport */
+    width: 100%; /* Full width */
+    position: fixed; /* Stays in place even when scrolling */
+    top: 0; /* Aligns to the top */
+    left: 0; /* Aligns to the left */
+    background-color: rgba(255, 255, 255, 0.7); /* Optional: adds a background for better visibility */
+}
+
+.loader {
+  width: 60px;
+  height: 100%;
+  aspect-ratio: 4;
+  background: radial-gradient(circle closest-side,#000 90%,#0000) 0/calc(100%/3) 100% space;
+  clip-path: inset(0 100% 0 0);
+  animation: l1 1s steps(4) infinite;
+  
+}
+@keyframes l1 {to{clip-path: inset(0 -34% 0 0)}}.loader-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    width: 100%; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    background-color: rgba(255, 255, 255, 0.7); 
+}
+
+.loader {
+    width: 60px; /* Fixed width */
+    aspect-ratio: 4 / 1; /* Adjust aspect ratio if needed */
+    background: radial-gradient(circle closest-side, #000 90%, #0000) 0/calc(100%/3) 100% space;
+    clip-path: inset(0 100% 0 0);
+    animation: l1 1s steps(4) infinite;
+}
+
+@keyframes l1 {
+    to {
+        clip-path: inset(0 -34% 0 0);
+    }
+}
